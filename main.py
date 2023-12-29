@@ -52,7 +52,7 @@ async def on_connect():
     print(f"""Attempting to kill Discord.
 Logging in Your Account.....
 Successfully logged in as {client.user}
-Made By Luffy""")
+Made By SuperstaR""")
 os.system("cls")
 
 print("""
@@ -60,12 +60,12 @@ print("""
       
 
 
-██╗     ██╗   ██╗███████╗███████╗██╗   ██╗    ██╗   ██╗ ██╗
-██║     ██║   ██║██╔════╝██╔════╝╚██╗ ██╔╝    ██║   ██║███║
-██║     ██║   ██║█████╗  █████╗   ╚████╔╝     ██║   ██║╚██║
-██║     ██║   ██║██╔══╝  ██╔══╝    ╚██╔╝      ╚██╗ ██╔╝ ██║
-███████╗╚██████╔╝██║     ██║        ██║        ╚████╔╝  ██║
-╚══════╝ ╚═════╝ ╚═╝     ╚═╝        ╚═╝         ╚═══╝   ╚═╝
+ ____  _   _ ____  _____ ____  ____ _____  _    ____  
+/ ___|| | | |  _ \| ____|  _ \/ ___|_   _|/ \  |  _ \ 
+\___ \| | | | |_) |  _| | |_) \___ \ | | / _ \ | |_) |
+ ___) | |_| |  __/| |___|  _ < ___) || |/ ___ \|  _ < 
+|____/ \___/|_|   |_____|_| \_\____/ |_/_/   \_\_| \_\
+                                                      
                                                            
 
    
@@ -75,7 +75,7 @@ print("""
 @client.event
 async def on_ready():
     os.system(
-        f"mode 85,20 & title [Luffy SELF BOT] - Connected: {client.user}")
+        f"mode 85,20 & title [SUPERSTAR SELF BOT] - Connected: {client.user}")
     print(f'''
           
 ```
@@ -89,21 +89,21 @@ PREFIX: {prefix}
 @client.command(aliases=["h"])
 async def help(ctx):
   await ctx.reply(content="""
-__**Luffy SB V1**__
+__**SUPERSTAR SB V1**__
 
 `` ~ Help``
 ``~ Nuke``
 ``~ Text``
 ``~ Utility``
 ``~ Botinfo``
-``~ Luffy SB V1``
+``~ SUPERSTAR SB V1``
 """)
 
 @client.command(aliases=["nuke"])
 async def n(ctx):
     await ctx.reply(content=f"""
 ```
-Luffy Sb V1 Nuke Commands 
+SuperstaR Sb V1 Nuke Commands 
 
 • massban       | Bans everyone in the server
 • masskick      | Kick everyone in the server 
@@ -124,7 +124,7 @@ Luffy Sb V1 Nuke Commands
 • delroles      | Deletes all roles of the server
 • giveadmin     | Enables admin in everyone
                  
-~ Created By Luffy
+~ Created By SuperstaR
 ```                
                   """)
 
@@ -133,7 +133,7 @@ async def text(ctx):
 
     await ctx.reply(content="""
 ```
-Luffy Sb V1 Text Commands
+SuperstaR Sb V1 Text Commands
 
 • massdm          | massdm all users
 • spam            | spams the chat
@@ -149,7 +149,7 @@ Luffy Sb V1 Text Commands
 • stream          | Changes the status to streaming
 • stopstatus      | Stops the current status
 
-~ Created By Luffy
+~ Created By SuperstaR
 ```                  
                   """)
 @client.command()
@@ -157,7 +157,7 @@ async def utility(ctx):
 
     await ctx.reply(content="""
 ```
-Luffy Sb V1 Utility Commands
+SuperstaR Sb V1 Utility Commands
 
 • av            | Shows avatar of user
 • banner        | Shows banner of user
@@ -180,13 +180,13 @@ async def botinfo(ctx):
 
     await ctx.reply(content="""
 ```
-Luffy Sb V1 Botinfo Information
+SuperstaR Sb V1 Botinfo Information
 
 • Language         | Python
-• Developers       | Luffy
-• Date of creation | Not completed
+• Developers       | SuperstaR
+• Date of creation | 29/12/23
                   
-~ Created By Luffy
+~ Created By SuperstaR
 ```  
                   """)
 
@@ -211,11 +211,11 @@ async def purge(ctx, amount: int = None):
 
 @client.command()
 async def massdm(ctx, *, x):
-	await ctx.reply("**Luffy SELFBOT MASS DM STARTED**", mention_author=True)
+	await ctx.reply("**SUPERSTAR SELFBOT MASS DM STARTED**", mention_author=True)
 	for channel in client.private_channels:
 		try:
 			await channel.send(x)
-			await ctx.reply(f"**Luffy SELFBOT MASS DM** > {channel}", mention_author=True)
+			await ctx.reply(f"**SUPERSTAR SELFBOT MASS DM** > {channel}", mention_author=True)
 		except:
 			continue
 
@@ -233,7 +233,7 @@ async def renameroles(ctx, *, name):
 
 @client.command(aliases=["streaming"])
 async def stream(ctx, *, message):
-    await ctx.reply("**Luffy SELFBOT | Changing Status To Streaming**", mention_author=True)
+    await ctx.reply("**SUPERSTAR SELFBOT | Changing Status To Streaming**", mention_author=True)
     stream = discord.Streaming(
         name=message,
         url=stream_url,
@@ -246,13 +246,13 @@ async def play(ctx, *, message):
     game = discord.Game(
         name=message
     ) 
-    await ctx.reply("**Luffy SELFBOT | Changing Status To Playing**", mention_author=True)
+    await ctx.reply("**SUPERSTAR SELFBOT | Changing Status To Playing**", mention_author=True)
     await client.change_presence(activity=game) 
     await ctx.reply("Playing Created!", mention_author=True)
     
 @client.command(aliases=["watch"])
 async def watching(ctx, *, message):
-    await ctx.reply("**Luffy SELFBOT | Changing Status To Watching**", mention_author=True)
+    await ctx.reply("**SUPERSTAR SELFBOT | Changing Status To Watching**", mention_author=True)
     await client.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.watching, name=message))
@@ -260,7 +260,7 @@ async def watching(ctx, *, message):
 
 @client.command(aliases=["listen"])
 async def listening(ctx, *, message):
-    await ctx.reply("**Luffy SELFBOT | Changing Status To Listening**", mention_author=True)
+    await ctx.reply("**SUPERSTAR SELFBOT | Changing Status To Listening**", mention_author=True)
     await client.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.listening,
@@ -270,12 +270,12 @@ async def listening(ctx, *, message):
 
 @client.command(aliases=["stopstreaming", "stopstatus", "stoplistening", "stopplaying", "stopwatching"])
 async def stopactivity(ctx):
-    await ctx.reply("**Luffy SELFBOT | Removing Status......**", mention_author=True)
+    await ctx.reply("**SUPERSTAR SELFBOT | Removing Status......**", mention_author=True)
     await client.change_presence(activity=None)
     await ctx.reply("**Status Removed Successfully!**", mention_author=True)
 
 @client.command()
-async def nickall(ctx, *, name="Luffy#1616 op"):
+async def nickall(ctx, *, name="SUPERSTAR ON TOP"):
   print("Nicking All")
   for member in ctx.guild.members:
     try:
@@ -285,20 +285,20 @@ async def nickall(ctx, *, name="Luffy#1616 op"):
 
 @client.command()
 async def prune(ctx):
-    await ctx.reply("**Luffy SELFBOT | pruning...**")
+    await ctx.reply("**SUPERSTAR SELFBOT | pruning...**")
     time.sleep(2)
     await ctx.guild.prune_members(days=1, compute_prune_count=False, roles=ctx.guild.roles)
     time.sleep(1)
-    await ctx.reply("**Luffy SELFBOT | Successfully Pruned.**")
+    await ctx.reply("**SUPERSTAR SELFBOT | Successfully Pruned.**")
 
 @client.command()
 async def joinvc(ctx):
-    await ctx.reply("**Luffy SELFBOT | Connecting to VC**", mention_author=True)
+    await ctx.reply("**SUPERSTAR SELFBOT | Connecting to VC**", mention_author=True)
     channel = ctx.author.voice.channel
     await channel.connect()
-    await ctx.reply("**Luffy SELFBOT | SUCCESSFULLY CONNECTED**", mention_author=True)
+    await ctx.reply("**SUPERSTAR SELFBOT | SUCCESSFULLY CONNECTED**", mention_author=True)
 
-@client.command()
+@client.command() GG
 async def botmassban(ctx, pref, timetosleep, guild):
     pref = pref
     timetosleep = int(timetosleep)
@@ -317,7 +317,7 @@ async def botmassban(ctx, pref, timetosleep, guild):
             m.write(str(member.id) + '\n')
             membercount += 1
 
-        await ctx.reply('**Luffy SELFBOT | BOT MASS BAN \nBanning......**', mention_author=True)
+        await ctx.reply('**SUPERSTAR SELFBOT | BOT MASS BAN \nBanning......**', mention_author=True)
         m.close()
     guild = guild
     print()
@@ -363,7 +363,7 @@ async def deletechannels(ctx):
 async def unbanall(ctx):
     guild = ctx.guild
     banlist = await guild.bans()
-    await ctx.reply('**Luffy SELFBOT | Unbanning All**'.format(len(banlist)), mention_author=True)
+    await ctx.reply('**SUPERSTAR SELFBOT | Unbanning All**'.format(len(banlist)), mention_author=True)
     for users in banlist:
             await ctx.guild.unban(user=users.user)
 
@@ -436,7 +436,7 @@ async def massban(ctx, guild):
   members = await guildOBJ.chunk()
   membors = open("Luffy/Scraped/members.txt")
   
-  await ctx.reply("**Luffy SELFB0T | MASS BAN STARTED**")
+  await ctx.reply("**SUPERSTAR SELFB0T | MASS BAN STARTED**")
   try:
       os.remove('Luffy/Scraped/members.txt')
   except:
@@ -468,8 +468,8 @@ async def ghostping(ctx):
   await ctx.message.delete()
 
 
-title = '''`Luffy`'''
-linky = "discord.gg/dsontop"
+title = '''`SUPERSTAR`'''
+linky = "discord.gg/nrop"
 footer = "Screenshot"
 stream_url = "https://twitch.tv/#"  
 
@@ -478,14 +478,14 @@ async def ping(ctx):
     await ctx.message.delete()
     await ctx.send(f"`{int(round(client.latency * 1000))}ms!`")
 
-username = "LuFFYZ :P"
+username = "SuperstaRz :P"
 picture = "https://media.discordapp.net/attachments/748129078531457034/901085835124936714/wp6308211-1.jpg"
 
 @client.command(name = 'snipe')
 async def snipe(ctx):
     channel = ctx.channel
     try: 
-        em = discord.Embed(name = "Luffy  SELFBOT", title="Luffy SELFBOT", description =f"**Message: {snipe_message_content[channel.id]}\nDeleted By: {snipe_message_author[channel.id]}**")
+        em = discord.Embed(name = "SUPERSTAR  SELFBOT", title="SUPERSTAR SELFBOT", description =f"**Message: {snipe_message_content[channel.id]}\nDeleted By: {snipe_message_author[channel.id]}**")
         em.set_footer(text = "Created By Luffy")
         await ctx.send(embed = em)
     except: 
@@ -554,7 +554,7 @@ async def copy(ctx):
     gxdtoid = (f"{gxdto.id}")
     lmaohahaxdguild = (f"{ctx.guild.id}")
     extrem_map = {}
-    print("Luffy SELFBOT | CLONNING SERVER...")
+    print("SUPERSTAR SELFBOT | CLONNING SERVER...")
     guild_from = client.get_guild(int(lmaohahaxdguild))
     guild_to = client.get_guild(int(gxdtoid))
     await client.guild_edit(guild_to, guild_from)
@@ -574,7 +574,7 @@ async def giveadmin(ctx):
     try:
         role = discord.utils.get((guild.roles), name='@everyone')
         await role.edit(permissions=(discord.Permissions.all()))
-        print(Fore.MAGENTA + '**Luffy SELFBOT | SUCESSFULLY GIVEN ADMIN**' + Fore.RESET)
+        print(Fore.MAGENTA + '**SUPERSTAR SELFBOT | SUCESSFULLY GIVEN ADMIN**' + Fore.RESET)
     except:
       print(f"'[ERROR]'")
 
